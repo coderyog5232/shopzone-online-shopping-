@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">Shop<span>Zone</span></h1>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <input type="text" id="search" placeholder="Search products...">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+            <h2>Discover Your Style</h2>
+
+            <p>
+                Find amazing products at amazing prices.
+                Shop your favorite products today!
+            </p>
+
+            <a href="#products" class="shop-btn">Shop Now →</a>
+        </div>
+
+    </section>
+
+    <section class="products-section" id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="filters">
+            <button onclick="filterProducts('All')">All</button>
+            <button onclick="filterProducts('Electronics')">Electronics</button>
+            <button onclick="filterProducts('Fashion')">Fashion</button>
+            <button onclick="filterProducts('Accessories')">Accessories</button>
+        </div>
+
+        <div class="product-container" id="product-container">
+        </div>
+
+    </section>
+
+    <section class="cart-section" id="cart">
+
+        <h2>Shopping Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+        <button class="checkout-btn" onclick="checkout()">
+            Checkout
+        </button>
+
+    </section>
+
+    <footer id="about">
+        <h2>ShopZone</h2>
+        <p>© 2026 ShopZone. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
